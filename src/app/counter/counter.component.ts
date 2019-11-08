@@ -8,22 +8,22 @@ import { Counter } from '../counter';
   templateUrl: './counter.component.html',
   styleUrls: ['./counter.component.css']
 })
-
 export class CounterComponent implements OnInit {
-  title = "Counter"
-  @Input() position :number;
+
+  @Input() position: number;
+
   value: Counter;
-  constructor( public counterService: CounterService ) { }
+
+  constructor(public counterService: CounterService) { }
 
   ngOnInit() {
-
-    this.counterService.getCounterValue(this.position).subscribe(counter => this.value= counter);
+    console.log("call counter")
+    this.counterService.getCounterValue(this.position)
+          .subscribe(counter => this.value =  counter)
   }
 
   increment() {
-   /* this.counterService.increment(this.position); */
- 
-    this.counterService.increment().subscribe(counter => this.value = counter);
+    this.counterService.increment(this.position);
   }
 
 }
