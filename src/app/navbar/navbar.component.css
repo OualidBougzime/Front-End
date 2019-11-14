@@ -10,7 +10,6 @@
   background: inherit;
 }
 
-
 .mat-toolbar.mat-primary {
   position: sticky;
   top: 0;
@@ -18,5 +17,11 @@
 }
 
 .content {
-  margin: 1em;
+  margin : 1em;
+}
+
+body {
+  z-index: 1;
+  text-align : right;
+  color : rgb(58, 219, 165);
 }

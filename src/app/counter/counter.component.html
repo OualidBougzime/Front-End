@@ -1,13 +1,23 @@
-<mat-card class="example-card" *ngIf="value">
-    <mat-card-header>
-      <mat-card-title>#{{position}} {{value.name}}</mat-card-title>
-    </mat-card-header>
+<mat-card class="counter"> 
+    
+    <mat-card-title>Compteur #{{ counter.name }}</mat-card-title>
+    <mat-card-subtitle>N°{{ counter.id }}</mat-card-subtitle>
+    
     <mat-card-content>
-      <p>
-        {{value.value}}
-      </p>
+        <p>{{ counter.value }}</p>
+        <p>Date de création : {{ counter.created_at }}</p>
+        <p>Date de dernière mise à jour : {{ counter.updated_at }}</p>
+
     </mat-card-content>
     <mat-card-actions>
-      <button mat-button (click)="increment()">Incrementer</button>
+        <button 
+          mat-button 
+          (click)="increment()"
+          [disabled]="counter.value == null">Incrémenter</button>
+        <a 
+          mat-button 
+          target="_blank"
+          [href]="counter.url">Lien vers le compteur</a>
     </mat-card-actions>
-  </mat-card>
+</mat-card>
+  
