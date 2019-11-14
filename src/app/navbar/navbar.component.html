@@ -11,8 +11,8 @@
         <mat-icon aria-hidden="false" aria-label="Example home icon">expand_more</mat-icon>
       </a>
       <div>
-        <button mat-raised-button (click)="auth.login()" *ngIf="!auth.loggedIn"">Log In</button>
-        <button mat-raised-button (click)="auth.login()" *ngIf="!auth.loggedIn"">Log Out</button>
+        <button mat-raised-button (click)="auth.login()" *ngIf="!auth.loggedIn">Log In</button>
+        <button mat-raised-button (click)="auth.login()" *ngIf="!auth.loggedIn">Log Out</button>
       </div>
       <mat-menu #menu="matMenu">
         <button 
