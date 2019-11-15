@@ -16,9 +16,9 @@ import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { CounterCardComponent } from './counter-card/counter-card.component';
 import { ActionCableService } from 'angular2-actioncable';
-
-
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import { ActionCableService } from 'angular2-actioncable';
     CounterComponent,
     NavbarComponent,
     HomeComponent,
-    ProfileComponent
+    ProfileComponent,
+    CounterCardComponent
   ],
   imports: [
     BrowserModule,
@@ -40,6 +41,7 @@ import { ActionCableService } from 'angular2-actioncable';
     MatListModule,
     MatCardModule,
     HttpClientModule,
+    MatMenuModule
   ],
   providers: [ActionCableService],
   bootstrap: [AppComponent]
