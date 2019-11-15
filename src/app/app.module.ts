@@ -16,16 +16,17 @@ import {MatCardModule} from '@angular/material/card';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './profile/profile.component';
-import { MatMenuModule } from '@angular/material/menu';
-import { CounterCardComponent } from './counter-card/counter-card.component';
+import { ActionCableService } from 'angular2-actioncable';
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
     CounterComponent,
     NavbarComponent,
     HomeComponent,
-    ProfileComponent,
-    CounterCardComponent
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -39,9 +40,8 @@ import { CounterCardComponent } from './counter-card/counter-card.component';
     MatListModule,
     MatCardModule,
     HttpClientModule,
-    MatMenuModule
   ],
-  providers: [],
+  providers: [ActionCableService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
